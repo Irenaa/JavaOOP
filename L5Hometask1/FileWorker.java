@@ -29,5 +29,25 @@ public class FileWorker {
 		}
 		
 	}
+	public static void copyFromTo(File in,File out,MyFileFilter my) {
+		File[] arrFiles= in.listFiles(my);
+		for (File file : arrFiles) {
+		try {
+			
+				File outFile= new File(out+"\\"+file.getName());
+				System.out.println(file.getName());
+				FileWorker.copyFile(file, outFile);
+			}
+			
+			
+		catch(IOException e) {
+			e.printStackTrace();
+		}
+		}
+	}
 }
+
+
+
+
 

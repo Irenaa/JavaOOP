@@ -6,7 +6,10 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		FileWorker.similarWordsFile(new File("first.txt"),new File("second.txt"),new File("c.txt"));
+		File a=new File("first.txt");
+		File b=new File("second.txt");
+		File c=new File("c.txt");
+		FileWorker.similarWordsFile(a,b,c);
 	}
 
 }
